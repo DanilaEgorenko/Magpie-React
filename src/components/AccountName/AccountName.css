@@ -1,0 +1,70 @@
+.user__input-name {
+    display: none;
+    position: fixed;
+    top: calc(10% + 160px);
+    font-size: 25px;
+    border: 0;
+    outline: 0;
+    height: 30px;
+    border-radius: 15px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    max-width: calc(30% - 60px);
+}
+
+.user__edit-name {
+    height: 40px;
+    padding: 10px;
+    position: fixed;
+    top: calc(10% + 200px);
+    z-index: 10;
+    min-width: 0px;
+    border-radius: 15px;
+    appearance: none;
+    border: 0;
+    outline: 0;
+    background: #b71c1c;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+    display: none;
+}
+
+.user__name {
+    position: fixed;
+    top: calc(10% + 160px);
+    font-size: 25px;
+    max-width: calc(30% - 60px);
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user__name::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    background: rgba(0, 0, 0, 0);
+    appearance: none;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: .2s;
+    background-image: url(/public/img/edit.png);
+    background-size: 100%;
+    position: fixed;
+    top: calc(10% + 165px);
+    opacity: .3;
+    filter: invert(var(--invert));
+}
+
+.user__name:hover::after {
+    opacity: 1;
+}
+
+.user .active {
+    display: block;
+}

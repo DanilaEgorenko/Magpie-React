@@ -1,0 +1,28 @@
+.user__pic {
+    position: fixed;
+    top: 10%;
+    display: inline-block;
+    background: indianred;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    background-size: 150px;
+    border-radius: 75px;
+}
+
+.user__pic-input {
+    background-image: url(/public/img/edit.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    filter: invert(var(--invert));
+    background-position: 50%, 50%;
+    height: 50px;
+    background-color: white;
+    width: 50px;
+    border-radius: 25px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 0;
+    transition: .3s;
+}

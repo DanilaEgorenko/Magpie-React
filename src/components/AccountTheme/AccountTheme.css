@@ -1,0 +1,68 @@
+.user__theme {
+    position: absolute;
+    bottom: 70px;
+    display: flex;
+    height: 30px;
+}
+
+.user__theme-text {
+    float: left;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    visibility: hidden;
+    display: none;
+}
+
+.check {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    background: #222226;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in .5s;
+    float: right;
+}
+
+#box:checked~.check {
+    background: #bbb;
+}
+
+.check:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #fff;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+input[type="checkbox"]:checked~.check:before {
+    transform: translateX(-50px);
+}
+
+.check:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: #222226;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: .5s;
+    transform: translateX(50px);
+}
+
+input[type="checkbox"]:checked~.check:after {
+    transform: translateX(0px);
+}

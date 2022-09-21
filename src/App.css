@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  font-size: 100%;
+  color: var(--color);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --main-bg-color: white;
+  --color: black;
+  --header-bg-color: rgba(0, 0, 0, 0.3);
+  --header-color: black;
+  --activity-bg-color: rgba(0, 255, 0, 0.3);
+  --user-bg-color: rgba(255, 0, 0, 0.3);
+  --invert: 0%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, .1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  box-shadow: none;
 }
 
-.App-link {
-  color: #61dafb;
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.blue-button {
+  height: 40px;
+  padding: 10px;
+  border-radius: 15px;
+  appearance: none;
+  border: 0;
+  outline: 0;
+  background: #4676D7;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.red-button {
+  height: 40px;
+  padding: 10px;
+  border-radius: 15px;
+  appearance: none;
+  border: 0;
+  outline: 0;
+  background: #b71c1c;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: .3s;
 }

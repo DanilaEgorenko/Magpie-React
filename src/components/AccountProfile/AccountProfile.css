@@ -1,0 +1,94 @@
+.user {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    width: 30%;
+    height: calc(100% - 60px);
+    background-color: var(--user-bg-color);
+    right: 0;
+    justify-content: center;
+}
+
+#sign-in,
+#sign-out {
+    position: fixed;
+    top: calc(10% + 200px);
+}
+
+.user__delete-button {
+    position: absolute;
+    bottom: 20px;
+}
+
+.user button:hover {
+    opacity: .8;
+}
+
+.user__profile-id {
+    font-size: 20px;
+    position: absolute;
+    bottom: 100px;
+}
+
+@media (max-width: 767px) {
+    .user {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .user .user-active {
+        display: flex;
+    }
+
+    .user .user__name {
+        max-width: calc(100% - 60px);
+    }
+
+    .user__input-name {
+        display: none;
+        max-width: calc(100% - 20px);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .user {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 30%;
+    }
+
+    .user .user__pic {
+        top: 15%;
+    }
+
+    .user__name::after {
+        top: calc(15% + 165px);
+    }
+
+    .user__input-name {
+        display: none;
+        top: calc(15% + 160px);
+    }
+
+    .user__edit-name {
+        top: calc(15% + 160px);
+    }
+
+    .user .user__name {
+        top: calc(15% + 160px);
+    }
+
+    #sign-in,
+    #sign-out {
+        top: calc(15% + 200px);
+    }
+
+    .user__delete-button {
+        position: absolute;
+    }
+}
